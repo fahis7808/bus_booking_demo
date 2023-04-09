@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/gestures.dart';
+import 'package:ksrtc_booking_demo/pages/manage_bus/add_driver.dart';
 import 'package:ksrtc_booking_demo/widgets/common_button.dart';
 import 'package:ksrtc_booking_demo/widgets/custom_appbar.dart';
-import 'dart:ui';
 
 import '../../utils.dart';
 
@@ -213,7 +212,7 @@ class BusDriverList extends StatelessWidget {
                  Container(
                      padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
                      child: CommonButton(text: "Add Driver", onTap: (){
-
+                       Navigator.push(context, MaterialPageRoute(builder: (ctc) => AddDriver()));
                      }))
                     ],
                   ),
