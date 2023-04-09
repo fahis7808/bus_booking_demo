@@ -2,32 +2,48 @@ import 'package:flutter/material.dart';
 import 'package:ksrtc_booking_demo/utils.dart';
 
 class CustomTextField extends StatelessWidget {
-  const CustomTextField({Key? key}) : super(key: key);
+  final String? hintText;
+  final String? value;
+  final Function(String)? onChanged;
+
+  const CustomTextField({
+    Key? key,
+     this.hintText,
+     this.value,
+     this.onChanged,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return  Container(
-      // autogroupfbnjkw2 (2uwVv5e8tzpWzXrii8fbNj)
-      margin: const EdgeInsets.fromLTRB(0, 0, 6, 17),
-      width: 321,
-      height: 58,
+    return Container(
+      height: 50,
+      padding: EdgeInsets.only(left: 10),
+      margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
       decoration: BoxDecoration (
         color: const Color(0x192a2a2a),
         borderRadius: BorderRadius.circular(10),
       ),
-      child: Center(
-        child: Text(
-          'Enter Username',
-          textAlign: TextAlign.center,
-          style: safeGoogleFont (
-            'Axiforma',
-            fontSize: 15,
-            fontWeight: FontWeight.w500,
-            height: 1.2575,
-            color: const Color(0xff6f6f6f),
-          ),
+      child: TextField(
+        style: safeGoogleFont (
+          'Axiforma',
+          fontSize: 20,
+          fontWeight: FontWeight.w500,
+          height: 1.2575,
+          color: const Color(0xff6f6f6f),
+        ),
+        controller: TextEditingController(
+            text: value.toString() == "null" ? "" : value.toString()),
+        onChanged: onChanged,
+        decoration: InputDecoration(
+          hintText: hintText,
+          fillColor: Color(0x192a2a2a),
+          border: InputBorder.none,
+          /* border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10.0),
+          ),*/
         ),
       ),
     );
   }
 }
+

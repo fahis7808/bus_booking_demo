@@ -66,20 +66,69 @@ class HomePage extends StatelessWidget {
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
+                          Container(
+                            margin: const EdgeInsets.fromLTRB(0, 0, 19, 0),
+                            padding: const EdgeInsets.fromLTRB(16, 7, 16, 121),
+                            width: 158,
+                            height: double.infinity,
+                            decoration: BoxDecoration (
+                              color: const Color(0xfffc153b),
+                              borderRadius: BorderRadius.circular(10),
+                              image: const DecorationImage (
+                                fit: BoxFit.cover,
+                                image: AssetImage (
+                                  'assets/page-1/images/mask-group-ZFN.png',
+                                ),
+                              ),
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  // busb36 (3:67)
+                                  margin: const EdgeInsets.fromLTRB(0, 0, 0, 2),
+                                  child: Text(
+                                    'Bus',
+                                    style: safeGoogleFont (
+                                      'Axiforma',
+                                      fontSize: 26,
+                                      fontWeight: FontWeight.w700,
+                                      height: 1.2575,
+                                      letterSpacing: -0.78,
+                                      color: const Color(0xffffffff),
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  // manageyourbus5yr (3:35)
+                                  margin: const EdgeInsets.fromLTRB(2, 0, 0, 0),
+                                  child: Text(
+                                    'Manage your Bus',
+                                    style: safeGoogleFont (
+                                      'Axiforma',
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w400,
+                                      height: 1.2575,
+                                      letterSpacing: -0.3,
+                                      color: const Color(0xffffffff),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
                           InkWell(
-
                             child: Container(
-                              margin: const EdgeInsets.fromLTRB(0, 0, 19, 0),
                               padding: const EdgeInsets.fromLTRB(16, 7, 16, 121),
                               width: 158,
                               height: double.infinity,
                               decoration: BoxDecoration (
-                                color: const Color(0xfffc153b),
+                                color: const Color(0xff2a2a2a),
                                 borderRadius: BorderRadius.circular(10),
                                 image: const DecorationImage (
                                   fit: BoxFit.cover,
                                   image: AssetImage (
-                                    'assets/page-1/images/mask-group-ZFN.png',
+                                    'assets/page-1/images/mask-group.png',
                                   ),
                                 ),
                               ),
@@ -87,10 +136,10 @@ class HomePage extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Container(
-                                    // busb36 (3:67)
+                                    // driverH4L (3:72)
                                     margin: const EdgeInsets.fromLTRB(0, 0, 0, 2),
                                     child: Text(
-                                      'Bus',
+                                      'Driver',
                                       style: safeGoogleFont (
                                         'Axiforma',
                                         fontSize: 26,
@@ -102,10 +151,10 @@ class HomePage extends StatelessWidget {
                                     ),
                                   ),
                                   Container(
-                                    // manageyourbus5yr (3:35)
+                                    // manageyourdriverBQc (3:73)
                                     margin: const EdgeInsets.fromLTRB(2, 0, 0, 0),
                                     child: Text(
-                                      'Manage your Bus',
+                                      'Manage your Driver',
                                       style: safeGoogleFont (
                                         'Axiforma',
                                         fontSize: 10,
@@ -122,57 +171,6 @@ class HomePage extends StatelessWidget {
                             onTap: (){
                               Navigator.push(context, MaterialPageRoute(builder: (context) => const BusDriverList()));
                             },
-                          ),
-                          Container(
-                            // autogroupnhxznNU (2uwY1meNVRerqhutU5nhXZ)
-                            padding: const EdgeInsets.fromLTRB(16, 7, 16, 121),
-                            width: 158,
-                            height: double.infinity,
-                            decoration: BoxDecoration (
-                              color: const Color(0xff2a2a2a),
-                              borderRadius: BorderRadius.circular(10),
-                              image: const DecorationImage (
-                                fit: BoxFit.cover,
-                                image: AssetImage (
-                                  'assets/page-1/images/mask-group.png',
-                                ),
-                              ),
-                            ),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Container(
-                                  // driverH4L (3:72)
-                                  margin: const EdgeInsets.fromLTRB(0, 0, 0, 2),
-                                  child: Text(
-                                    'Driver',
-                                    style: safeGoogleFont (
-                                      'Axiforma',
-                                      fontSize: 26,
-                                      fontWeight: FontWeight.w700,
-                                      height: 1.2575,
-                                      letterSpacing: -0.78,
-                                      color: const Color(0xffffffff),
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  // manageyourdriverBQc (3:73)
-                                  margin: const EdgeInsets.fromLTRB(2, 0, 0, 0),
-                                  child: Text(
-                                    'Manage your Driver',
-                                    style: safeGoogleFont (
-                                      'Axiforma',
-                                      fontSize: 10,
-                                      fontWeight: FontWeight.w400,
-                                      height: 1.2575,
-                                      letterSpacing: -0.3,
-                                      color: const Color(0xffffffff),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
                           ),
                         ],
                       ),
