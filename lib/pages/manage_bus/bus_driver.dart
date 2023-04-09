@@ -15,7 +15,7 @@ class BusDriverList extends StatelessWidget {
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
     return Scaffold(
-      body: Container(
+      body: SizedBox(
         width: double.infinity,
         child: Container(
           // WwA (3:607)
@@ -210,9 +210,9 @@ class BusDriverList extends StatelessWidget {
                             );
                       })),
                  Container(
-                     padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                     padding: const EdgeInsets.fromLTRB(10, 5, 10, 5),
                      child: CommonButton(text: "Add Driver", onTap: (){
-                       Navigator.push(context, MaterialPageRoute(builder: (ctc) => AddDriver()));
+                       Navigator.push(context, MaterialPageRoute(builder: (ctc) => const AddDriver()));
                      }))
                     ],
                   ),

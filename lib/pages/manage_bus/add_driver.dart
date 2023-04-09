@@ -25,7 +25,7 @@ class AddDriver extends StatelessWidget {
               // autogroupz5kwJW4 (2uwfB9YafskCkb2TLaZ5kw)
               padding: EdgeInsets.fromLTRB(24.25*fem, 14.33*fem, 0*fem, 29*fem),
               width: 375.66*fem,
-              decoration: BoxDecoration (
+              decoration: const BoxDecoration (
                 color: Color(0xff2a2a2a),
               ),
               child: Column(
@@ -36,7 +36,7 @@ class AddDriver extends StatelessWidget {
                     margin: EdgeInsets.fromLTRB(10.25*fem, 0*fem, 0*fem, 38.67*fem),
                     width: 341.16*fem,
                     height: 19*fem,
-                    child: CustomAppBar(),
+                    child: const CustomAppBar(),
                   ),
                   Container(
                     margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 153.16*fem, 0*fem),
@@ -64,7 +64,7 @@ class AddDriver extends StatelessWidget {
                             fontSize: 16*ffem,
                             fontWeight: FontWeight.w500,
                             height: 1.125*ffem/fem,
-                            color: Color(0xffffffff),
+                            color: const Color(0xffffffff),
                           ),
                         ),
                       ],
@@ -93,7 +93,7 @@ class AddDriver extends StatelessWidget {
                             width: double.infinity,
                             height: 58*fem,
                             decoration: BoxDecoration (
-                              color: Color(0x192a2a2a),
+                              color: const Color(0x192a2a2a),
                               borderRadius: BorderRadius.circular(10*fem),
                             ),
                             child: Center(
@@ -105,7 +105,7 @@ class AddDriver extends StatelessWidget {
                                   fontSize: 15*ffem,
                                   fontWeight: FontWeight.w500,
                                   height: 1.2575*ffem/fem,
-                                  color: Color(0xff6f6f6f),
+                                  color: const Color(0xff6f6f6f),
                                 ),
                               ),
                             ),
@@ -114,7 +114,7 @@ class AddDriver extends StatelessWidget {
                             width: double.infinity,
                             height: 58*fem,
                             decoration: BoxDecoration (
-                              color: Color(0x192a2a2a),
+                              color: const Color(0x192a2a2a),
                               borderRadius: BorderRadius.circular(10*fem),
                             ),
                             child: Center(
@@ -126,7 +126,7 @@ class AddDriver extends StatelessWidget {
                                   fontSize: 15*ffem,
                                   fontWeight: FontWeight.w500,
                                   height: 1.2575*ffem/fem,
-                                  color: Color(0xff6f6f6f),
+                                  color: const Color(0xff6f6f6f),
                                 ),
                               ),
                             ),

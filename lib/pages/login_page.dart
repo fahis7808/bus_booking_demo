@@ -114,68 +114,65 @@ class LoginPage extends StatelessWidget {
               ),
             ),
             Expanded(
-              child: Container(
-                // padding: const EdgeInsets.fromLTRB(29, 10.52, 19, 46),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
-                      children: [
-                        Container(
-                          // autogroupfbnjkw2 (2uwVv5e8tzpWzXrii8fbNj)
-                          margin: const EdgeInsets.fromLTRB(0, 0, 6, 17),
-                          width: 321,
-                          height: 58,
-                          decoration: BoxDecoration (
-                            color: const Color(0x192a2a2a),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Center(
-                            child: Text(
-                              'Enter Username',
-                              textAlign: TextAlign.center,
-                              style: safeGoogleFont (
-                                'Axiforma',
-                                fontSize: 15,
-                                fontWeight: FontWeight.w500,
-                                height: 1.2575,
-                                color: const Color(0xff6f6f6f),
-                              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    children: [
+                      Container(
+                        // autogroupfbnjkw2 (2uwVv5e8tzpWzXrii8fbNj)
+                        margin: const EdgeInsets.fromLTRB(0, 0, 6, 17),
+                        width: 321,
+                        height: 58,
+                        decoration: BoxDecoration (
+                          color: const Color(0x192a2a2a),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Center(
+                          child: Text(
+                            'Enter Username',
+                            textAlign: TextAlign.center,
+                            style: safeGoogleFont (
+                              'Axiforma',
+                              fontSize: 15,
+                              fontWeight: FontWeight.w500,
+                              height: 1.2575,
+                              color: const Color(0xff6f6f6f),
                             ),
                           ),
                         ),
-                        Container(
-                          // autogroupmxgpbRr (2uwW2k7hbi38TZUpZfMXGP)
-                          margin: const EdgeInsets.fromLTRB(0, 0, 6, 267),
-                          width: 321,
-                          height: 58,
-                          decoration: BoxDecoration (
-                            color: const Color(0x192a2a2a),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Center(
-                            child: Text(
-                              'Enter Password',
-                              textAlign: TextAlign.center,
-                              style: safeGoogleFont (
-                                'Axiforma',
-                                fontSize: 15,
-                                fontWeight: FontWeight.w500,
-                                height: 1.2575,
-                                color: const Color(0xff6f6f6f),
-                              ),
+                      ),
+                      Container(
+                        // autogroupmxgpbRr (2uwW2k7hbi38TZUpZfMXGP)
+                        margin: const EdgeInsets.fromLTRB(0, 0, 6, 267),
+                        width: 321,
+                        height: 58,
+                        decoration: BoxDecoration (
+                          color: const Color(0x192a2a2a),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Center(
+                          child: Text(
+                            'Enter Password',
+                            textAlign: TextAlign.center,
+                            style: safeGoogleFont (
+                              'Axiforma',
+                              fontSize: 15,
+                              fontWeight: FontWeight.w500,
+                              height: 1.2575,
+                              color: const Color(0xff6f6f6f),
                             ),
                           ),
                         ),
-                      ],
-                    ),
-                    // Expanded(child: SizedBox()),
-                    CommonButton(text: "Login", onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (ctx) => HomePage()));
-                    })
-                  ],
-                ),
+                      ),
+                    ],
+                  ),
+                  // Expanded(child: SizedBox()),
+                  CommonButton(text: "Login", onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (ctx) => const HomePage()));
+                  })
+                ],
               ),
             ),
           ],

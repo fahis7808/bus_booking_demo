@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/gestures.dart';
 import 'package:ksrtc_booking_demo/pages/manage_bus/bus_driver.dart';
+import 'package:ksrtc_booking_demo/pages/manage_bus/bus_seat.dart';
+import 'package:ksrtc_booking_demo/widgets/common_button.dart';
 import 'package:ksrtc_booking_demo/widgets/custom_appbar.dart';
 
 import '../utils.dart';
@@ -33,7 +34,7 @@ class HomePage extends StatelessWidget {
                     // statusbarewA (3:883)
                     margin: const EdgeInsets.fromLTRB(0, 0, 0, 12.67),
                     width: double.infinity,
-                    child: CustomAppBar()
+                    child: const CustomAppBar()
                   ),
                   Container(
                     // logoGUg (3:55)
@@ -118,7 +119,7 @@ class HomePage extends StatelessWidget {
                               ),
                             ),
                             onTap: (){
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => BusDriverList()));
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => const BusDriverList()));
                             },
                           ),
                           Container(
@@ -254,7 +255,10 @@ class HomePage extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                Container(
+                              CommonButton(text: "Manage", textSize: 14,width: 80,height: 40,onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (ctx) => const BusSeat()));
+                              },)
+                              /*  Container(
                                   // group2GGx (3:121)
                                   margin: const EdgeInsets.fromLTRB(0, 21.5, 0, 21.5),
                                   width: 70,
@@ -285,7 +289,7 @@ class HomePage extends StatelessWidget {
                                       ),
                                     ),
                                   ),
-                                ),
+                                ),*/
                               ],
                             ),
                           );
