@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
+import 'package:ksrtc_booking_demo/pages/manage_bus/bus_driver.dart';
 import 'package:ksrtc_booking_demo/widgets/custom_appbar.dart';
 
 import '../utils.dart';
@@ -116,7 +117,9 @@ class HomePage extends StatelessWidget {
                                 ],
                               ),
                             ),
-                            onTap: (){},
+                            onTap: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => BusDriverList()));
+                            },
                           ),
                           Container(
                             // autogroupnhxznNU (2uwY1meNVRerqhutU5nhXZ)
