@@ -132,13 +132,17 @@ class LoginPage extends StatelessWidget {
                             CustomTextField(
                               value: value.userName,
                               hintText: "User Name",
-                              onChanged: (val){},
+                              onChanged: (val){
+                                value.userName = val;
+                              },
                             ),
                             const SizedBox(height: 20,),
                             CustomTextField(
                               value: value.passWord,
                               hintText: "PassWord",
-                              onChanged: (val){},
+                              onChanged: (val){
+                                value.passWord = val;
+                              },
                             ),
                           ],
                         ),
@@ -146,7 +150,7 @@ class LoginPage extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: CommonButton(text: "Login", onTap: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (ctx) => const HomePage()));
+                            Provider.of<LoginPageVM>(context,listen: false).getLogin(context);
                           }),
                         )
                       ],
