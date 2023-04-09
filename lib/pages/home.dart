@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ksrtc_booking_demo/pages/manage_bus/bus_driver.dart';
 import 'package:ksrtc_booking_demo/pages/manage_bus/bus_seat.dart';
-import 'package:ksrtc_booking_demo/widgets/common_button.dart';
+import 'package:ksrtc_booking_demo/pages/manage_bus/bus_seat_2.dart';
+import 'package:ksrtc_booking_demo/widgets/cardWidget/bus_card.dart';
 import 'package:ksrtc_booking_demo/widgets/custom_appbar.dart';
 
 import '../utils.dart';
@@ -195,104 +196,24 @@ class HomePage extends StatelessWidget {
                     child: ListView.builder(
                         itemCount: 10,
                         itemBuilder: (BuildContext context,int index){
-                         return Container(
-                            margin: const EdgeInsets.fromLTRB(0, 0, 0, 13),
-                            padding: const EdgeInsets.fromLTRB(0, 0, 19, 0),
-                            width: double.infinity,
-                            height: 74,
-                            decoration: BoxDecoration (
-                              border: Border.all(color: const Color(0xffc1c1c1)),
-                              color: const Color(0xffffffff),
-                              borderRadius: BorderRadius.circular(10),
-                              boxShadow: const [
-                                BoxShadow(
-                                  color: Color(0x56d4d4d4),
-                                  offset: Offset(1, 4),
-                                  blurRadius: 3.5,
-                                ),
-                              ],
-                            ),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Container(
-                                  margin: const EdgeInsets.fromLTRB(0, 0, 14.5, 0),
-                                  padding: const EdgeInsets.fromLTRB(8.5, 17.5, 8.5, 17.5),
-                                  height: double.infinity,
-                                  decoration: const BoxDecoration (
-                                    color: Color(0xfff3f3f3),
-                                    borderRadius: BorderRadius.only (
-                                      topLeft: Radius.circular(9),
-                                      bottomLeft: Radius.circular(9),
-                                    ),
-                                  ),
-                                  child: Center(
-                                    // image34At (3:119)
-                                    child: SizedBox(
-                                      width: 62,
-                                      height: 38,
-                                      child: Image.asset(
-                                        'assets/page-1/images/image-3-rZE.png',
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  // ksrtcswiftscaniapseriesNSU (3:120)
-                                  margin: const EdgeInsets.fromLTRB(0, 4, 49, 0),
-                                  constraints: const BoxConstraints (
-                                    maxWidth: 103,
-                                  ),
-                                  child: Text(
-                                    'KSRTC\nSwift Scania P-​series\n',
-                                    style: safeGoogleFont (
-                                      'Axiforma',
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w500,
-                                      height: 1.5,
-                                      color: const Color(0xff474747),
-                                    ),
-                                  ),
-                                ),
-                              CommonButton(text: "Manage", textSize: 14,width: 80,height: 40,onTap: (){
-                                Navigator.push(context, MaterialPageRoute(builder: (ctx) => const BusSeat()));
-                              },)
-                              /*  Container(
-                                  // group2GGx (3:121)
-                                  margin: const EdgeInsets.fromLTRB(0, 21.5, 0, 21.5),
-                                  width: 70,
-                                  height: double.infinity,
-                                  decoration: BoxDecoration (
-                                    borderRadius: BorderRadius.circular(4),
-                                  ),
-                                  child: Container(
-                                    // group3zTr (3:122)
-                                    width: double.infinity,
-                                    height: double.infinity,
-                                    decoration: BoxDecoration (
-                                      color: const Color(0xfffc153b),
-                                      borderRadius: BorderRadius.circular(4),
-                                    ),
-                                    child: Center(
-                                      child: Text(
-                                        'Manage',
-                                        textAlign: TextAlign.center,
-                                        style: safeGoogleFont (
-                                          'Axiforma',
-                                          fontSize: 10,
-                                          fontWeight: FontWeight.w400,
-                                          height: 1.2575,
-                                          letterSpacing: -0.3,
-                                          color: const Color(0xffffffff),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),*/
-                              ],
-                            ),
-                          );
+                         return Column(
+                           children: [
+                             BusCard(
+                               busName: 'KSRTC\nSwift Scania P-​series\n',
+                               busImage: 'assets/page-1/images/image-3-rZE.png',
+                               onTap: (){
+                                 Navigator.push(context, MaterialPageRoute(builder: (ctx) => const BusSeat()));
+                               },
+                             ),
+                             BusCard(
+                               busName: 'KSRTC\nSwift Scania P-​series\n',
+                               busImage: 'assets/page-1/images/image-3-rZE.png',
+                               onTap: (){
+                                 Navigator.push(context, MaterialPageRoute(builder: (ctx) => const BusSeat2()));
+                               },
+                             ),
+                           ],
+                         );
                     }),
                   ),
                   ],
