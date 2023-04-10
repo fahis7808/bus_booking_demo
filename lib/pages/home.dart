@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ksrtc_booking_demo/pages/manage_bus/bus_driver.dart';
+import 'package:ksrtc_booking_demo/pages/manage_bus/bus_driver/bus_driver.dart';
 import 'package:ksrtc_booking_demo/pages/manage_bus/bus_seat.dart';
 import 'package:ksrtc_booking_demo/pages/manage_bus/bus_seat_2.dart';
 import 'package:ksrtc_booking_demo/widgets/cardWidget/bus_card.dart';
