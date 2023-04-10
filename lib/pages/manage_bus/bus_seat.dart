@@ -3,9 +3,6 @@ import 'package:ksrtc_booking_demo/widgets/cardWidget/driver_card.dart';
 import 'package:ksrtc_booking_demo/widgets/custom_appbar.dart';
 import 'package:ksrtc_booking_demo/widgets/cardWidget/seat.dart';
 
-import '../../utils.dart';
-
-
 class BusSeat extends StatelessWidget {
   const BusSeat({super.key});
 
@@ -13,7 +10,6 @@ class BusSeat extends StatelessWidget {
   Widget build(BuildContext context) {
     double baseWidth = 375;
     double fem = MediaQuery.of(context).size.width / baseWidth;
-    double ffem = fem * 0.97;
     return Scaffold(
       body: SizedBox(
         width: double.infinity,
@@ -27,76 +23,12 @@ class BusSeat extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Container(
-                // autogrouppebdp16 (2uwgsgYjNjYmezHvTGPEbD)
-                // margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 27.96*fem),
-                width: double.infinity,
-                height: 120,
-                child: Stack(
-                  children: [
-                    Positioned(
-                      // rectangle2XgC (3:155)
-                      left: 0*fem,
-                      top: 0*fem,
-                      child: Align(
-                        child: SizedBox(
-                          width: 375*fem,
-                          height: 119*fem,
-                          child: Container(
-                            decoration: const BoxDecoration (
-                              color: Color(0xff2a2a2a),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      // ksrtcswiftscaniapseriesJMW (3:231)
-                      left: 95.5*fem,
-                      top: 72*fem,
-                      child: Align(
-                        child: SizedBox(
-                          width: 184*fem,
-                          height: 18*fem,
-                          child: Text(
-                            'KSRTC Swift Scania P-​series\n',
-                            textAlign: TextAlign.center,
-                            style: safeGoogleFont (
-                              'Axiforma',
-                              fontSize: 16*ffem,
-                              fontWeight: FontWeight.w500,
-                              height: 1.125*ffem/fem,
-                              color: const Color(0xffffffff),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      // iconlylightarrowleftMqa (3:738)
-                      left: 24.2497558594*fem,
-                      top: 73.2496948242*fem,
-                      child: Align(
-                        child: SizedBox(
-                          width: 15*fem,
-                          height: 12.05*fem,
-                          child: Image.asset(
-                            'assets/page-1/images/iconly-light-arrow-left-kP2.png',
-                            width: 15*fem,
-                            height: 12.05*fem,
-                          ),
-                        ),
-                      ),
-                    ),
-                  const CustomAppBar()
-                  ],
-                ),
-              ),
+              const CustAppBar(title: "KSRTC Swift Scania P-​series",),
               const DriverCard(driverName: "Rohit Sharma",
                 licenseNo: 'PJ515196161655',
                 image: 'assets/page-1/images/mask-group-mFN.png',
               ),
-              SizedBox(height: 25,),
+              const SizedBox(height: 25,),
               Expanded(
                 child: Container(
                   // autogroup31kpmgL (2uwhEWHNKTMRzCcVFJ31kP)

@@ -21,35 +21,8 @@ class HomePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
-              // autogroupkaeo9Di (2uwXGTZCvojtK2NER9KAEo)
-              padding: const EdgeInsets.fromLTRB(34.5, 14.33, 13.34, 31.28),
-              width: double.infinity,
-              decoration: const BoxDecoration (
-                color: Color(0xff2a2a2a),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    // statusbarewA (3:883)
-                    margin: const EdgeInsets.fromLTRB(0, 0, 0, 12.67),
-                    width: double.infinity,
-                    child: const CustomAppBar()
-                  ),
-                  Container(
-                    // logoGUg (3:55)
-                    margin: const EdgeInsets.fromLTRB(0, 0, 21.92, 0),
-                    width: 126.24,
-                    height: 41.72,
-                    child: Image.asset(
-                      'assets/page-1/images/logo-YrC.png',
-                      width: 126.24,
-                      height: 41.72,
-                    ),
-                  ),
-                ],
-              ),
+            CustAppBar(
+              image: 'assets/page-1/images/logo-YrC.png',
             ),
             Expanded(
               child: Container(

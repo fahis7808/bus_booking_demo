@@ -8,12 +8,16 @@ class AddDriverVM extends ChangeNotifier{
 
   String path = "DriverApi";
 
-  BusDriverModel driverData = BusDriverModel();
+  BusDriverModel driverData = const BusDriverModel();
 
   Future addAnDriver(BuildContext context) async{
-    await Apis.RestPosta(path, driverData.copyWith().toJson());
-    Navigator.pop(context);
-    notifyListeners();
+    if(driverData.licenseNo == null){
+      print("add Driver");
+    }else {
+      await Apis.restPostData(path, driverData.copyWith().toJson());
+      Navigator.pop(context);
+      notifyListeners();
+    }
   }
   
 }

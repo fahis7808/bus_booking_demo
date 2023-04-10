@@ -32,62 +32,7 @@ class BusDriverList extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Container(
-                    // autogroupzf6tSpp (2uwbfv3tGCcZ3EYNnwZF6T)
-                    margin: EdgeInsets.fromLTRB(
-                        0 * fem, 0 * fem, 0 * fem, 20 * fem),
-                    padding: EdgeInsets.fromLTRB(
-                        24.25 * fem, 14.33 * fem, 13.34 * fem, 29 * fem),
-                    width: double.infinity,
-                    decoration: const BoxDecoration(
-                      color: Color(0xff2a2a2a),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                            // statusbaruyJ (3:931)
-                            margin: EdgeInsets.fromLTRB(
-                                10.25 * fem, 0 * fem, 0 * fem, 38.67 * fem),
-                            child: const CustomAppBar()),
-                        Container(
-                          // autogroupek3dshA (2uwbqQn4cWkNgJJa2yEk3D)
-                          margin: EdgeInsets.fromLTRB(
-                              0 * fem, 0 * fem, 140.66 * fem, 0 * fem),
-                          width: double.infinity,
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                // iconlylightarrowlefto52 (3:859)
-                                margin: EdgeInsets.fromLTRB(
-                                    0 * fem, 1.25 * fem, 114.75 * fem, 0 * fem),
-                                width: 15 * fem,
-                                height: 12.05 * fem,
-                                child: Image.asset(
-                                  'assets/page-1/images/iconly-light-arrow-left-fSx.png',
-                                  width: 15 * fem,
-                                  height: 12.05 * fem,
-                                ),
-                              ),
-                              Text(
-                                // driverlisttsA (3:727)
-                                'Driver List',
-                                textAlign: TextAlign.center,
-                                style: safeGoogleFont(
-                                  'Axiforma',
-                                  fontSize: 16 * ffem,
-                                  fontWeight: FontWeight.w500,
-                                  height: 1.125 * ffem / fem,
-                                  color: const Color(0xffffffff),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                  CustAppBar(title: 'Driver List',),
                   Container(
                     // driversfoundEAL (3:625)
                     margin: EdgeInsets.fromLTRB(

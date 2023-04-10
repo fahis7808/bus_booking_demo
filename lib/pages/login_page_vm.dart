@@ -9,6 +9,7 @@ class LoginPageVM extends ChangeNotifier{
   String? userName;
   String? passWord;
   bool isSuccess = false;
+  String path = "LoginApi";
 
   Future<void> getLogin(BuildContext context) async {
     final url = Uri.parse('http://flutter.noviindus.co.in/api/LoginApi');

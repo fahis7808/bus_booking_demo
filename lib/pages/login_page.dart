@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ksrtc_booking_demo/pages/home.dart';
 import 'package:ksrtc_booking_demo/pages/login_page_vm.dart';
 import 'package:ksrtc_booking_demo/utils.dart';
 import 'package:ksrtc_booking_demo/widgets/common_button.dart';
-import 'package:ksrtc_booking_demo/widgets/custom_appbar.dart';
 import 'package:ksrtc_booking_demo/widgets/custom_textfield.dart';
 import 'package:provider/provider.dart';
 
@@ -107,16 +105,6 @@ class LoginPage extends StatelessWidget {
                                 ),
                               ),
                             ),
-                          ),
-                        ),
-                        const Positioned(
-                          // statusbarYuW (3:867)
-                          left: 34.5,
-                          top: 14.3333129883,
-                          child: SizedBox(
-                            width: 327.16,
-                            height: 19,
-                            child: CustomAppBar(),
                           ),
                         ),
                       ],

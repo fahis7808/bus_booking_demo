@@ -1,33 +1,40 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
 
 class Apis{
 
-  static Future RestPost(
+  static Future restPost(
       String path,
       Map<String, dynamic> data,
       ) async {
-    var base_url = 'http://flutter.noviindus.co.in/api/';
+    var baseUrl = 'http://flutter.noviindus.co.in/api/';
     final headers = {'Content-Type': 'application/json'};
 
     try {
-      final response = await http.post(Uri.parse(base_url + path), headers: headers, body: json.encode(data),);
+      final response = await http.post(Uri.parse(baseUrl + path), headers: headers, body: json.encode(data),);
       if (response.statusCode == 200) {
         var responseData = jsonDecode(response.body);
-        print(responseData);
+        if (kDebugMode) {
+          print(responseData);
+        }
         if(responseData['status'] == true){
           responseData = responseData['data'];
         }
       } else {
         // Request failed, handle error
-        print('Request failed with status: ${response.statusCode}.');
+        if (kDebugMode) {
+          print('Request failed with status: ${response.statusCode}.');
+        }
       }
     } catch (error) {
       // Request failed due to an error, handle error
-      print('Request failed with error: $error.');
+      if (kDebugMode) {
+        print('Request failed with error: $error.');
+      }
     }}
 
   static Future <Map<String, dynamic>> fetchData(
@@ -46,7 +53,7 @@ class Apis{
     }
   }
 
-  static Future RestPosta(
+  static Future restPostData(
       String path,
       Map<String, dynamic> data,) async {
     String url = 'http://flutter.noviindus.co.in/api/$path/0ARKHG2/';
@@ -62,10 +69,10 @@ class Apis{
           headers: headers);
 
       if (response.statusCode == 200) {
-        var decoded_response = jsonDecode(response.body);
+        var decodedResponse = jsonDecode(response.body);
 
-        if (decoded_response["success"] == false) {
-          var errorMessage = decoded_response["message"];
+        if (decodedResponse["success"] == false) {
+          var errorMessage = decodedResponse["message"];
           throw HttpException(errorMessage);
         }
 
@@ -74,8 +81,8 @@ class Apis{
         throw HttpException(errorMessage);
       }
     } catch (e) {
-      var error_message = "An error occurred while processing your request.";
-      return {error_message: e.toString()};
+      var errorMessage = "An error occurred while processing your request.";
+      return {errorMessage: e.toString()};
     }
   }
 
@@ -90,7 +97,9 @@ class Apis{
    final response = await http.delete(url, headers: headers, body: body);
 
    if (response.statusCode == 200) {
-     print('Data deleted successfully');
+     if (kDebugMode) {
+       print('Data deleted successfully');
+     }
    } else {
      throw Exception('Failed to delete data');
    }
